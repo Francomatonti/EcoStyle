@@ -1,0 +1,77 @@
+<html>
+<head>
+    <title>Sondaggio Videogiochi</title>
+    <script>
+        function inviaSondaggio() {
+            alert("Sondaggio inviato!");
+
+            document.getElementById("sondaggioForm").reset();
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Sondaggio sulla Soddisfazione Videogiochi</h1>
+
+        <form id="sondaggioForm" onsubmit="inviaSondaggio();">
+
+            <fieldset>
+                <legend>Dati personali</legend>
+
+                <label for="nome">Nome:</label><br>
+                <input type="text" id="nome" name="nome" required><br><br>
+
+                <label for="cognome">Cognome:</label><br>
+                <input type="text" id="cognome" name="cognome" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+            </fieldset>
+
+            <br>
+
+            <fieldset>
+                <legend>Preferenze di gioco</legend>
+
+                <label for="genere">Genere preferito:</label><br>
+                <select id="genere" name="genere" required>
+                    <option value="rpg">RPG</option>
+                    <option value="fps">FPS</option>
+                    <option value="sport">Sport</option>
+                    <option value="indie">Indie</option>
+                </select><br><br>
+
+                <p>Quante ore giochi al giorno?</p>
+                <input type="radio" id="ore1" name="ore" value="0-2" required>
+                <label for="ore1">0-2</label><br>
+
+                <input type="radio" id="ore2" name="ore" value="2-5" required>
+                <label for="ore2">2-5</label><br>
+
+                <input type="radio" id="ore3" name="ore" value="5+" required>
+                <label for="ore3">5+</label><br><br>
+
+                <p>Quali piattaforme possiedi?</p>
+                <input type="checkbox" id="pc" name="piattaforme" value="pc">
+                <label for="pc">PC</label><br>
+
+                <input type="checkbox" id="playstation" name="piattaforme" value="playstation">
+                <label for="playstation">PlayStation</label><br>
+
+                <input type="checkbox" id="xbox" name="piattaforme" value="xbox">
+                <label for="xbox">Xbox</label><br>
+
+                <input type="checkbox" id="switch" name="piattaforme" value="switch">
+                <label for="switch">Switch</label><br><br>
+
+                <label for="gioco">Qual è il miglior gioco a cui hai giocato quest'anno e perché?</label><br>
+                <textarea id="gioco" name="gioco" rows="5" cols="40"></textarea>
+			</fieldset>
+            
+            <input type="submit" value="Invia">
+            <input type="reset" value="Resetta">
+
+        </form>
+    </center>
+</body>
+</html>
